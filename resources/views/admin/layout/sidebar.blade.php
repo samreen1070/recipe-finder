@@ -15,8 +15,10 @@
             </a>
             <div class="collapse" id="ui-basic">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/buttons.html">Users</a></li>
-                <li class="nav-item"> <a class="nav-link" href="pages/ui-features/dropdowns.html">Roles</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{route('users.index')}}">Users List</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{route('users.create')}}">Users Creation</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{route('roles.index')}}">Role List</a></li>
+                <li class="nav-item"> <a class="nav-link" href="{{route('roles.create')}}">Role Creation</a></li>
               </ul>
             </div>
           </li>

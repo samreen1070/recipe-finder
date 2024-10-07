@@ -74,8 +74,15 @@
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
               <a class="dropdown-item">
                 <i class="ti-settings text-primary"></i> Settings </a>
-              <a class="dropdown-item">
-                <i class="ti-power-off text-primary"></i> Logout </a>
+                <a class="dropdown-item" href="{{ route('logout') }}"
+                onclick="event.preventDefault();
+                              document.getElementById('logout-form').submit();" style="color:rgb(255, 179, 14);">
+                 {{ __('Logout') }}
+             </a>
+
+             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none" style="color:rgb(255, 179, 14);">
+                 @csrf
+             </form>
             </div>
           </li>
           <li class="nav-item nav-settings d-none d-lg-flex">
